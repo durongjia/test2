@@ -1,0 +1,12 @@
+image: python:latest
+
+run:
+  script:
+    - pip install twine
+    - python setup.py bdist_wheel
+    - TWINE_PASSWORD=${CI_JOB_TOKEN} TWINE_USERNAME=gitlab-ci-token python -m twine upload --repository-url https://gitlab.com/api/v4/projects/${CI_PROJECT_ID}/packages/pypi dist/*
+  artifacts:
+    paths:
+      - dist/*.whl
+  only:
+  - main
