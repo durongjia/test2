@@ -12,8 +12,7 @@ setuptools.setup(
     packages=setuptools.find_packages(),
     include_package_data=True,
     package_data={
-        "": ["bin/bootrom-tool"],
-        "": ["bin/bootrom-tool.exe"],
+        "": ["bin/bootrom-tool", "bin/bootrom-tool.exe"],
     },
     entry_points={
         'console_scripts': [
