@@ -14,4 +14,8 @@ def main():
 
     binary = pkg_resources.resource_filename('aiot_bootrom', bin_name)
     sys.argv[0] = binary
-    subprocess.run(sys.argv, check=True)
+
+    try:
+        subprocess.run(sys.argv, check=True)
+    except KeyboardInterrupt:
+        pass
