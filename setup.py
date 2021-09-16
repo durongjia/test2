@@ -6,7 +6,7 @@ import setuptools
 
 setuptools.setup(
     name="aiot-bootrom",
-    version="1.1.1",
+    version="1.1.2",
     author="Fabien Parent",
     author_email="fparent@baylibre.com",
     packages=setuptools.find_packages(),
