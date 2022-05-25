@@ -14,6 +14,9 @@ setuptools.setup(
     package_data={
         "": ["bin/bootrom-tool", "bin/bootrom-tool.exe"],
     },
+    install_requires=[
+        'pyudev;platform_system=="Linux"',
+    ],
     entry_points={
         'console_scripts': [
             'aiot-bootrom=aiot_bootrom.bootrom:main',
